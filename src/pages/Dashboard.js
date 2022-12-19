@@ -54,29 +54,11 @@ function Dashboard() {
                 <img src={btnAddImg} alt="button add" />
               </button>
             </div>
-            {/* <ul className="nav-task">
-              <li className="task-item">
-                <Checkbox>Cook Rice and Chicken at 10 am</Checkbox>
-              </li>
-              <li className="task-item">
-                <Checkbox>Learn Reactjs at 12 pm</Checkbox>
-              </li>
-              <li className="task-item">
-                <Checkbox>Have Launch at 1pm</Checkbox>
-              </li>
-              <li className="task-item">
-                <Checkbox>Learn HTML and CSS at 3pm</Checkbox>
-              </li>
-              <li className="task-item">
-                <Checkbox>Have Dinner at 8pm</Checkbox>
-              </li>
-            </ul> */}
-
             <ul className="nav-task">
               {taskList &&
                 taskList.map((todo) => {
                   return (
-                    <li key={todo.id}>
+                    <li className="force-overflow" key={todo.id}>
                       <Checkbox defaultChecked={todo.completed} />
                       <span>
                         &nbsp;
